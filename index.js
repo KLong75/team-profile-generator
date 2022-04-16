@@ -5,17 +5,67 @@ const promptUser = () => {
     return inquirer.prompt([
       {
         type: 'input',
-        name: 'name',
-        message: 'What is your name? (Required)',
-        validate: nameInput => {
-          if (nameInput) {
+        name: 'manager',
+        message: 'Enter manager name (Required)',
+        validate: managerNameInput => {
+          if (managerNameInput) {
             return true;
           } else {
-            console.log('Please enter your name!');
+            console.log('Please enter a valid manager name');
             return false;
           }
         }
       },
+      {
+        type: 'input',
+        name: 'id',
+        message: 'Enter your employee ID number(Required)',
+        validate: idInput => {
+          if (idInput) {
+            return true;
+          } else {
+            console.log('Please enter a valid employee ID number');
+            return false;
+          }
+        }
+      },
+      {
+        type: 'input',
+        name: 'email',
+        message: 'Enter your email address (Required)',
+        validate: emailInput => {
+          if (emailInput) {
+            return true;
+          } else {
+            console.log('Please enter your email address');
+            return false;
+          }
+        }
+      },
+      {
+        type: 'input',
+        name: 'office',
+        message: 'Enter your office number (Required)',
+        validate: officeInput => {
+          if (officeInput) {
+            return true;
+          } else {
+            console.log('Enter a valid office number');
+            return false;
+          }
+        }
+      },
+
+
+
+
+
+
+
+
+
+
+/*
       {
         type: 'input',
         name: 'role',
@@ -67,7 +117,7 @@ const promptUser = () => {
             return false;
           }
         }
-      },
+      },*/
     ]);
   };
 
