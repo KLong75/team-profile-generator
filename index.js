@@ -227,7 +227,7 @@ function selectEmployee() {
 
         // using the generated HTML, write to a file using fs
         fs.writeFile('./dist/index.html', output, () => {
-            console.log('Any message')
+            console.log('Your Team Profile has been created!')
 
         })
 
