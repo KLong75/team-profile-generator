@@ -1,5 +1,4 @@
-const generateProfile = (employeeArray) => {
-    return `
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,23 +15,24 @@ const generateProfile = (employeeArray) => {
   <header class="jumbotron text-center">
       <h1 class="display-5">My Team</h1>
   </header>
-    ${
-        employeeArray.map((employee) => {
-            return `
+    
             <div class ="card" style="width: 18rem;">
               <div class ="card-body">
-                <h3>${employee.name}</h3>
-                <h4>${employee.id}</h4>
-                <h5>${employee.email}</h5>
-                <h6>${employee.role}</h6>
+                <h3>Manager</h3>
+                <h4>1</h4>
+                <h5>email@address.com</h5>
+                <h6>undefined</h6>
               </div>
             </div>    
-            `
-        })
-    }
+            ,
+            <div class ="card" style="width: 18rem;">
+              <div class ="card-body">
+                <h3>Name</h3>
+                <h4>45</h4>
+                <h5>email@address.com</h5>
+                <h6>undefined</h6>
+              </div>
+            </div>    
+            
 </body>
 </html>
-`
-}
-
-module.exports = generateProfile;

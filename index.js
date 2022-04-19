@@ -8,6 +8,8 @@ const Intern = require('./lib/intern');
 
 const generateProfile = require('./src/page-template');
 
+const employeeArray = []
+
 const createManager = () => {
     return inquirer.prompt([
       {
@@ -63,7 +65,12 @@ const createManager = () => {
         }
       },
       
-    ]);
+    ]).then ((answers) => {
+        const newManager = new Manager(answers.manager, answers.id, answers.email, answers.office)
+        console.log(newManager);
+        employeeArray.push(newManager);
+        selectEmployee()
+    })
   };
 
 function selectEmployee() {
@@ -142,7 +149,10 @@ function selectEmployee() {
         }
       },
       
-    ]).then (() => {
+    ]).then ((answers) => {
+        const newEngineer = new Engineer(answers.engineer, answers.id, answers.email, answers.github)
+        console.log(newEngineer)
+        employeeArray.push(newEngineer);
         selectEmployee()
     })
   };
@@ -202,14 +212,26 @@ function selectEmployee() {
         }
       },
       
-    ]).then (() => {
+    ]).then ((answers) => {
+        const newIntern = new Intern(answers.intern, answers.id, answers.email, answers.school)
+        console.log(newIntern)
+        employeeArray.push(newIntern);
         selectEmployee()
     })
   };
 
   const writeProfile = () => {
-      console.log('Any message')
+
+        // generate the HTML using your template
+        const output = generateProfile(employeeArray)
+
+        // using the generated HTML, write to a file using fs
+        fs.writeFile('./dist/index.html', output, () => {
+            console.log('Any message')
+
+        })
+
   }
 
 
-  createManager().then(selectEmployee)
+  createManager()
