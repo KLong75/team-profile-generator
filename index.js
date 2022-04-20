@@ -220,7 +220,7 @@ function selectEmployee() {
   };
 
   const writeProfile = () => {
-        // generate the HTML using your template
+        // generate the HTML using template
         const output = generateProfile(employeeArray)
         // using the generated HTML, write to a file using fs
         fs.writeFile('./dist/index.html', output, () => {
