@@ -77,7 +77,7 @@ function selectEmployee() {
       inquirer.prompt({
         type: 'list',
         name: 'options',
-        message: 'Select from the following:',
+        message: 'Select from the choices below. Press Enter to make your selection.',
         choices: [
           "Add an engineer",
           "Add an intern",
@@ -90,9 +90,8 @@ function selectEmployee() {
         } else {
           writeProfile()
         }  
-
       })
-  }
+  };
 
   const createEngineer = () => {
     inquirer.prompt([
@@ -195,7 +194,7 @@ function selectEmployee() {
           } else {
             console.log('Please enter your email address');
             return false;
-          }
+          };
         }
       },
       {
@@ -208,7 +207,7 @@ function selectEmployee() {
           } else {
             console.log('Enter a valid school name');
             return false;
-          }
+          };
         }
       },
       
@@ -217,21 +216,15 @@ function selectEmployee() {
         console.log(newIntern)
         employeeArray.push(newIntern);
         selectEmployee()
-    })
+    });
   };
 
   const writeProfile = () => {
-
         // generate the HTML using your template
         const output = generateProfile(employeeArray)
-
         // using the generated HTML, write to a file using fs
         fs.writeFile('./dist/index.html', output, () => {
             console.log('Your Team Profile has been created!')
-
-        })
-
-  }
-
-
-  createManager()
+        });
+  };
+  createManager();

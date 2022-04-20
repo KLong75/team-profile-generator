@@ -12,7 +12,7 @@ const generateProfile = (employeeArray) => {
 </head>
 <body class = "bg-dark" >
   <header class="jumbotron text-center bg-success">
-      <h1 class="display-5 shadow-lg text-dark">My Team</h1>
+      <h1 class="display-1 shadow-lg text-dark">My Team</h1>
   </header>      
   <main>
     <div class="container">
@@ -23,8 +23,8 @@ const generateProfile = (employeeArray) => {
                 return `
                 <div class ="card shadow-lg p-3 mb-5 bg-success rounded px-md-2 mt-y mx-3" style="width: 20rem;">
                   <div class ="card-body text-success shadow-lg p-3 mb-5 bg-dark rounded">
-                    <h3 class="card-title shadow-lg text-center ">${employee.name}</h3>
-                    <h4 class="card-title fas fa-coffee">  ${employee.role}</h4>
+                    <h2 class="card-title text-center ">${employee.name}</h2>
+                    <h5 class="card-title fas fa-coffee">   ${employee.role}</h5>
                     <h5 class="card-title">Employee ID: ${employee.id}</h5>
                     <a class = "text-success" href="mailto:${employee.email}"><h5 class="card-title">${employee.email}</h5></a>
                     <h5 class="card-title">Office # ${employee.office}</h5>
@@ -35,8 +35,8 @@ const generateProfile = (employeeArray) => {
                 return `
                 <div class ="card shadow-lg p-3 mb-5 bg-success rounded px-md-2 mt-y mx-3" style="width: 20rem;">
                   <div class ="card-body text-success shadow-lg p-3 mb-5 bg-dark rounded">
-                    <h3 class="card-title shadow-lg text-center">${employee.name}</h3>
-                    <h4 class="card-title fas fa-cogs">  ${employee.role}</h4>
+                    <h2 class="card-title text-center">${employee.name}</h2>
+                    <h5 class="card-title fas fa-cogs">   ${employee.role}</h5>
                     <h5 class="card-title">Employee ID: ${employee.id}</h5>
                     <a class = "text-success" href="mailto:${employee.email}"><h5 class="card-title">${employee.email}</h5></a>
                     <a class = "text-success" href="https://github.com/${employee.github}" target="_blank"><h5 class="card-title">GitHub: ${employee.github}</h5></a>
@@ -46,9 +46,9 @@ const generateProfile = (employeeArray) => {
             } else if (employee.role === 'Intern') {
                 return `
                 <div class ="card shadow-lg p-3 mb-5 bg-success rounded px-md-2 mt-y mx-3" style="width: 20rem;">
-                  <div class ="card-body text-success shadow-lg p-3 mb-5 bg-dark rounded">
-                    <h3 class="card-title shadow-lg text-center">${employee.name}</h3>
-                    <h4 class="card-title fa fa-graduation-cap">  ${employee.role}</h4>
+                  <div class ="card-body text-success p-3 mb-5 bg-dark rounded">
+                    <h2 class="card-title text-center">${employee.name}</h2>
+                    <h5 class="card-title fa fa-graduation-cap">   ${employee.role}</h5>
                     <h5 class="card-title">Employee ID: ${employee.id}</h5>
                     <a class = "text-success" href="mailto:${employee.email}"><h5 class="card-title">${employee.email}</h5></a>         
                     <h5 class="card-title">School: ${employee.school}</h5>
@@ -63,6 +63,6 @@ const generateProfile = (employeeArray) => {
 </body>
 </html>
 `
-}
+};
 
 module.exports = generateProfile;
