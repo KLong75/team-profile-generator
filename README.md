@@ -6,7 +6,11 @@
 https://watch.screencastify.com/v/Sa1Zjw4Z1J9IL9HqSFlS
 
 ## Screenshots
+![Screenshot Team Profile](https://user-images.githubusercontent.com/98487770/164999212-1331c028-d15c-43ee-918d-3994d1feeb26.png)
 
+![Screenshot Command Line Prompt](https://user-images.githubusercontent.com/98487770/164999242-d9ff6945-cac8-48d5-9777-2ad903301f78.png)
+
+![Screenshot Command Line Prompt(1)](https://user-images.githubusercontent.com/98487770/164999251-251caffa-2e44-4579-88ca-7a9abc2bc9db.png)
 
 ## Description
 The Team Profile Generator allows a manager to quickly and easily create a Team Profile through the command line that contains information about each team member specific to their roleon the team. The application uses node.js and features object oriented programming. 
