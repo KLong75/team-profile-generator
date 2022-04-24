@@ -137,7 +137,7 @@ function selectEmployee() {
       {
         type: 'input',
         name: 'github',
-        message: 'Enter engineer GitHUb username (Required)',
+        message: 'Enter engineer GitHub username (Required)',
         validate: officeInput => {
           if (officeInput) {
             return true;
